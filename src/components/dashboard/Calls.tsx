@@ -11,6 +11,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 const calls = [
   {
@@ -68,6 +69,11 @@ const transcript = [
 ];
 
 export default function CallLogs() {
+
+  const handleRecord = () => {
+    toast.success("Record is Clicked..")
+  }
+
   return (
     <div className="space-y-6">
       {/* Filters */}
@@ -165,7 +171,7 @@ export default function CallLogs() {
                 <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">AI Resolved</Badge>
                 <p className="text-sm text-muted-foreground">Outcome: <span className="text-foreground font-medium">Quote provided</span></p>
               </div>
-              <button className="w-full h-12 cursor-pointer bg-linear-to-bl from-violet-900 to-fuchsia-900 rounded-xl flex items-center justify-center gap-3 font-medium text-fuchsia-300 transition-colors border border-fuchsia-900">
+              <button onClick={handleRecord} className="w-full h-12 cursor-pointer bg-linear-to-bl from-violet-900 to-fuchsia-900 rounded-xl flex items-center justify-center gap-3 font-medium text-fuchsia-300 transition-colors border border-fuchsia-900">
                 <Play className="w-4 h-4 text-fuchsia-300" /> Play Audio Recording
               </button>
             </div>

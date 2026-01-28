@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router";
+import { toast } from "sonner";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const navItems = [
@@ -19,6 +20,10 @@ export const navItems = [
 ];
 
 export default function Sidebar() {
+
+  const handleLogout = ()=> {
+    toast.success("Logout Success!")
+  }
   
 const {pathname} = useLocation();
   return (
@@ -53,7 +58,7 @@ const {pathname} = useLocation();
       </nav>
 
       <div className="p-8 border-t border-border/50">
-        <button className="flex items-center gap-3 text-destructive hover:text-destructive/80 transition-colors w-full group">
+        <button onClick={handleLogout} className="flex cursor-pointer items-center gap-3 text-destructive hover:text-destructive/80 transition-colors w-full group">
           <LogOut className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
           <span className="font-medium text-[15px]">Log Out</span>
         </button>
