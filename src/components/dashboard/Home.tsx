@@ -122,7 +122,7 @@ export default function Home() {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {stats.map((stat) => (
-                    <Card key={stat.title} className="p-6 border-border hover:border-primary/50 transition-colors">
+                    <Card key={stat.title} className="p-6 w-full border-border hover:border-primary/50 transition-colors">
                         <div className="flex justify-between items-start">
                             <div className="space-y-2">
                                 <p className="text-muted-foreground text-sm font-medium">{stat.title}</p>

@@ -84,7 +84,7 @@ export default function Appointments() {
           </div>
           <button
             onClick={copyLink}
-            className="h-12 px-6 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 rounded-xl font-medium transition-all flex items-center justify-center gap-2 shrink-0"
+            className="h-12 px-6 bg-slate-800 text-white border cursor-pointer border-slate-500 rounded-xl font-medium transition-all flex items-center justify-center gap-2 shrink-0"
           >
             <Copy className="w-4 h-4" /> Copy Link
           </button>
@@ -110,7 +110,7 @@ export default function Appointments() {
             <TableBody>
               {appointments.map((apt, idx) => (
                 <TableRow key={idx} className="border-border hover:bg-white/5 transition-colors group">
-                  <TableCell className="font-medium text-primary cursor-pointer group-hover:underline underline-offset-4">{apt.name}</TableCell>
+                  <TableCell className="font-medium text-blue-500 cursor-pointer group-hover:underline underline-offset-4">{apt.name}</TableCell>
                   <TableCell>{apt.phone}</TableCell>
                   <TableCell>{apt.email}</TableCell>
                   <TableCell>{apt.device}</TableCell>
@@ -133,14 +133,14 @@ export default function Appointments() {
             {[1, 2, 3, 4, 5, "...", 11].map((p, idx) => (
               <button
                 key={idx}
-                className={`w-8 h-8 rounded-lg text-sm font-medium transition-all ${p === 2 ? "bg-primary text-primary-foreground shadow-[0_0_10px_rgba(34,211,238,0.4)]" : "text-muted-foreground hover:bg-white/5"
+                className={`w-8 h-8 rounded-lg text-sm font-medium transition-all ${p === 2 ? "bg-blue-600 text-primary-foreground shadow-[0_0_10px_rgba(34,211,238,0.4)]" : "text-muted-foreground hover:bg-white/5"
                   } ${typeof p !== 'number' && p !== '...' ? 'hidden md:block' : ''}`}
               >
                 {p}
               </button>
             ))}
           </div>
-          <button className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors order-3">
+          <button className="flex items-center gap-2 text-sm text-blue-500 hover:text-blue-600 transition-colors order-3">
             Next <ChevronRight className="w-4 h-4" />
           </button>
         </div>

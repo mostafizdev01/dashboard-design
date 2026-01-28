@@ -105,8 +105,8 @@ export default function CallLogs() {
               >
                 <div className="flex justify-between items-start mb-3">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Phone className="w-4 h-4 text-primary" />
+                    <div className="p-2 bg-linear-to-r from-cyan-500 to-blue-500 rounded-lg">
+                      <Phone className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <p className="font-semibold">{call.number}</p>
@@ -165,8 +165,8 @@ export default function CallLogs() {
                 <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">AI Resolved</Badge>
                 <p className="text-sm text-muted-foreground">Outcome: <span className="text-foreground font-medium">Quote provided</span></p>
               </div>
-              <button className="w-full h-12 bg-primary/10 hover:bg-primary/20 text-primary rounded-xl flex items-center justify-center gap-3 font-medium transition-colors border border-primary/20">
-                <Play className="w-4 h-4 fill-primary" /> Play Audio Recording
+              <button className="w-full h-12 cursor-pointer bg-linear-to-bl from-violet-900 to-fuchsia-900 rounded-xl flex items-center justify-center gap-3 font-medium text-fuchsia-300 transition-colors border border-fuchsia-900">
+                <Play className="w-4 h-4 text-fuchsia-300" /> Play Audio Recording
               </button>
             </div>
 

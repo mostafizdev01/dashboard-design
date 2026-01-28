@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className=" ml-70 mr-6 mt-24">
+      <div className=" mx-4 md:ml-70 md:mr-6 mt-24">
         <Outlet />
       </div>
       <Sidebar />
