@@ -1,11 +1,17 @@
-import { Button } from "./components/ui/button"
+// import Home from "./components/dashboard/Home"
+import { Outlet } from "react-router"
+import Header from "./components/shared/Header"
+import Sidebar from "./components/shared/Sidebar"
 
 
 const App = () => {
   return (
     <div>
-      <h2 className=" text-3xl text-center mt-8">This is App Router!</h2>
-      <Button>Click me</Button>
+      <Header />
+      <div className=" ml-70 mr-6 mt-24">
+        <Outlet />
+      </div>
+      <Sidebar />
     </div>
   )
 }
