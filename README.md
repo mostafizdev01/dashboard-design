@@ -3,7 +3,7 @@
 This project is a responsive dashboard UI built as part of a frontend development assessment.  
 The main objective was to accurately implement the given design while following modern frontend best practices, clean code structure, and reusable components.
 
-🔗 **Live Demo:** https://dashboard-design-azure.vercel.app/
+🔗 **Live Demo:** https://dashboard-design-azure.vercel.app
 
 ---
 
